@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #0b2434;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body .App {
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 35px;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+@media (max-width : 576px) {
+  body .App {
+    max-width: 300px;
+  }
+}
+body .App .container {
+  display: grid;
+  grid-template: auto auto/repeat(5, 1fr);
+  gap: 20px;
+}
+body .App .die {
+  width: 50px;
+  height: 50px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width : 576px) {
+  body .App .die {
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+  }
+}
+body .App button {
+  width: 100px;
+  height: 50px;
+  margin-top: 40px;
   color: white;
+  background-color: #5035ff;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 0px 3.1999998093px 7.6799998283px 0px rgba(0, 0, 0, 0.18);
 }
-
-.App-link {
-  color: #61dafb;
+body .App button:focus {
+  outline: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+body .App button:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+body .App h1 {
+  font-size: 40px;
+  margin: 0;
+}
+body .App p {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  font-size: 20px;
+  color: #4a4e74;
+  margin: 10px 0px 30px;
+}
+@media (max-width : 576px) {
+  body .App p {
+    font-size: 17px;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+}/*# sourceMappingURL=App.css.map */
